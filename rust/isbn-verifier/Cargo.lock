@@ -1,0 +1,4 @@
+[[package]]
+name = "isbn-verifier"
+version = "2.7.0"
+
