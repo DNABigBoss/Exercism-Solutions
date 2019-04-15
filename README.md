@@ -1,2 +1,3 @@
 # Exercism-Solutions
-This is my exercism solutions. i'm beginner
+Solutions exercise from exercism (rust language)
+link for exercism : https://exercism.io/
