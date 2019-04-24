@@ -8,7 +8,7 @@ In Pascal's Triangle each number is computed by adding the numbers to the right 
 
 Result from first line to n-lines will be come a vector and the result line will be add to a larger vector. we must return this larger vector to solve this problem.
 
-# A my way to solved problem :
+# My way to solved problem :
 First, Make struct will be soon call by new function in implementation. This struct only fill with row_count (count of row) where have a usize type data.
 
 Second, Make function rows to return result we want.
@@ -38,7 +38,7 @@ impl PascalsTriangle {
         let mut row = vec![vec![1]];
         // Create next row
         for i in 1..self.row_count {
-            let next = next_row(&row[i - 1]);
+            let next = next_row(&row[i-1]);
             row.push(next);
         }
         row
@@ -47,9 +47,10 @@ impl PascalsTriangle {
 
 pub fn next_row(prev: &[u32]) -> Vec<u32> {
     let mut row = vec![1];
-
+    
+    // from previous len a left add by right
     for i in 1..prev.len() {
-        row.push(prev[i - 1] + prev[i]);
+        row.push(prev[i-1] + prev[i]);
     }
 
     row.push(1);
